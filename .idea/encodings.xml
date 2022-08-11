@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/1_introducaoSpringBoot/Ex1_IntroducaoSpringBoot/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/1_introducaoSpringBoot/Ex1_IntroducaoSpringBoot/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/1_introducaoSpringBoot/Ex2_SpringBootConfig/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/2_simplificandoProjJava/Ex1_utilizandoBeans/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/2_simplificandoProjJava/Ex1_utilizandoBeans/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/2_simplificandoProjJava/Ex4_springbootweb/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/2_simplificandoProjJava/Ex4_springbootweb/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/2_simplificandoProjJava/Ex5_personApi/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/2_simplificandoProjJava/Ex5_personApi/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/2_simplificandoProjJava/Ex6_ProjetoFeign1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/2_simplificandoProjJava/Ex6_ProjetoFeign1/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/2_simplificandoProjJava/Ex7_ProjetoFeign2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/2_simplificandoProjJava/Ex7_ProjetoFeign2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/2_simplificandoProjJava/Ex8_springbootTest/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/2_simplificandoProjJava/Ex8_springbootTest/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/3_estiloArquiteturalRest/Ex1_RestSpring/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/3_estiloArquiteturalRest/Ex1_RestSpring/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

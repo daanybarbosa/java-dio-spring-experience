@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/1_introducaoSpringBoot/Ex2_SpringBootConfig/pom.xml" />
+        <option value="$PROJECT_DIR$/1_introducaoSpringBoot/Ex1_IntroducaoSpringBoot/pom.xml" />
+        <option value="$PROJECT_DIR$/2_simplificandoProjJava/Ex5_personApi/pom.xml" />
+        <option value="$PROJECT_DIR$/2_simplificandoProjJava/Ex4_springbootweb/pom.xml" />
+        <option value="$PROJECT_DIR$/2_simplificandoProjJava/Ex6_ProjetoFeign1/pom.xml" />
+        <option value="$PROJECT_DIR$/2_simplificandoProjJava/Ex7_ProjetoFeign2/pom.xml" />
+        <option value="$PROJECT_DIR$/2_simplificandoProjJava/Ex8_springbootTest/pom.xml" />
+        <option value="$PROJECT_DIR$/2_simplificandoProjJava/Ex1_utilizandoBeans/pom.xml" />
+        <option value="$PROJECT_DIR$/3_estiloArquiteturalRest/Ex1_RestSpring/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="18" project-jdk-type="JavaSDK" />
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
+  </component>
+</project>

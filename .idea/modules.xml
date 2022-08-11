@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/1_introducaoSpringBoot/Ex2_SpringBootConfig/Ex2_SpringBootConfig.iml" filepath="$PROJECT_DIR$/1_introducaoSpringBoot/Ex2_SpringBootConfig/Ex2_SpringBootConfig.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2_simplificandoProjJava/Ex7_ProjetoFeign2/Ex7_ProjetoFeign2.iml" filepath="$PROJECT_DIR$/2_simplificandoProjJava/Ex7_ProjetoFeign2/Ex7_ProjetoFeign2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2_simplificandoProjJava/Ex8_springbootTest/Ex8_springbootTest.iml" filepath="$PROJECT_DIR$/2_simplificandoProjJava/Ex8_springbootTest/Ex8_springbootTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2_simplificandoProjJava/Ex6_ProjetoFeign1/ProjetoFeign.iml" filepath="$PROJECT_DIR$/2_simplificandoProjJava/Ex6_ProjetoFeign1/ProjetoFeign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1_introducaoSpringBoot/Ex1_IntroducaoSpringBoot/introducaoSpringBoot.iml" filepath="$PROJECT_DIR$/1_introducaoSpringBoot/Ex1_IntroducaoSpringBoot/introducaoSpringBoot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/java-dio-spring-experience.iml" filepath="$PROJECT_DIR$/.idea/java-dio-spring-experience.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2_simplificandoProjJava/Ex5_personApi/personApi.iml" filepath="$PROJECT_DIR$/2_simplificandoProjJava/Ex5_personApi/personApi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3_estiloArquiteturalRest/Ex1_RestSpring/projeto-spring-boot.iml" filepath="$PROJECT_DIR$/3_estiloArquiteturalRest/Ex1_RestSpring/projeto-spring-boot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2_simplificandoProjJava/Ex4_springbootweb/springbootweb.iml" filepath="$PROJECT_DIR$/2_simplificandoProjJava/Ex4_springbootweb/springbootweb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2_simplificandoProjJava/Ex1_utilizandoBeans/utilizandoBeans.iml" filepath="$PROJECT_DIR$/2_simplificandoProjJava/Ex1_utilizandoBeans/utilizandoBeans.iml" />
+    </modules>
+  </component>
+</project>
