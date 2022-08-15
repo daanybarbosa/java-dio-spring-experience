@@ -16,40 +16,24 @@ public class ProdutoController {
     @Autowired
     private ProdutoService service;
 
-    @PostMapping(value = "/save") //maneira mais pratica de transformar em um metodo POST
-    public ResponseEntity<Produto> salvaProduto(@RequestBody Produto produto) { //ira retornar o id do produto
-        produto = service.save(produto);
-        return ResponseEntity.ok().body(produto);
-    }
-
-    /* Exemplo 1
-    //@RequestMapping(method = RequestMethod.GET, value = "/produto/save")
-    @RequestMapping(method = RequestMethod.GET, value = "/save") //ira obter o endpoint base "/produto/save"
-    public void salvaProduto(Produto produto) {
-
-        service.save(produto);
-    }
-
-    // Exemplo 1
-    @RequestMapping(method = RequestMethod.PUT, value = "/produto/update")
-    public void salvaProduto(Produto produto) {
-
-        service.save(produto);
-    }*/
-
-    // Exemplo 2
     /*
-    @PostMapping //POST - cada metodo é usada para uma finalidade
-    public ResponseEntity<Produto> salvaProduto1(@RequestBody Produto produto) { //ira retornar o id do produto
+    @PostMapping(value = "/save") //maneira mais pratica de transformar em um metodo POST
+    public ResponseEntity salvaProduto(@RequestBody Produto produto) { //ira retornar o id do produto
+        try {
+            produto = service.save(produto);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+
+        return ResponseEntity.ok().body(produto);
+    } */
+
+    @PostMapping(value = "/save") //maneira mais pratica de transformar em um metodo POST
+    public ResponseEntity<Produto> salvaProduto(@RequestBody Produto produto) throws Exception { //ira retornar o id do produto
+
         produto = service.save(produto);
         return ResponseEntity.ok().body(produto);
     }
-
-    @PatchMapping //PATCH
-    public ResponseEntity<Produto> salvaProduto2(@RequestBody Produto produto) { //ira retornar o id do produto
-        produto = service.save(produto);
-        return ResponseEntity.ok().body(produto);
-    }*/
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<Produto> buscaProduto(@PathVariable Long id) {

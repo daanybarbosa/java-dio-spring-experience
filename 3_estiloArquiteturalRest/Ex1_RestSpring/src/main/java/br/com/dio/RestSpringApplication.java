@@ -1,4 +1,4 @@
-package br.com.dio.RestSpring;
+package br.com.dio;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
