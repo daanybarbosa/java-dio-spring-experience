@@ -11,18 +11,18 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.dio.entity.Produto;
-import br.com.dio.service.ProdutoService;
+import br.com.dio.entity.Pedido;
+import br.com.dio.service.PedidoService;
 
 @RestController
-@RequestMapping(value = "/produto")
-public class ProdutoController {
+@RequestMapping(value = "/pedido")
+public class PedidoController {
 
     @Autowired
-    private ProdutoService service;
+    private PedidoService service;
 
     @PostMapping(value = "/save")
-    public ResponseEntity<Produto> salvaProduto(@RequestBody Produto produto) throws Exception {
+    public ResponseEntity<Pedido> salvaProduto(@RequestBody Pedido produto) {
 
         produto = service.save(produto);
 
@@ -31,20 +31,20 @@ public class ProdutoController {
     }
 
     @GetMapping(value = "/{id}")
-    public ResponseEntity<Produto> buscaProduto(@PathVariable Long id) {
+    public ResponseEntity<Pedido> buscaProduto(@PathVariable Long id) {
 
-        Produto produto = service.findById(id);
+        Pedido pedido = service.findById(id);
 
-        return ResponseEntity.ok().body(produto);
+        return ResponseEntity.ok().body(pedido);
 
     }
 
     @GetMapping(value = "/busca-todos")
-    public ResponseEntity<List<Produto>> buscaTodosProdutos() {
+    public ResponseEntity<List<Pedido>> buscaTodosProdutos() {
 
-        List<Produto> produtos = service.findAll();
+        List<Pedido> pedidos = service.findAll();
 
-        return ResponseEntity.ok().body(produtos);
+        return ResponseEntity.ok().body(pedidos);
 
     }
 }
