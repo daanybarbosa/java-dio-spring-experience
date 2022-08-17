@@ -21,55 +21,55 @@ import br.com.dio.config.jwt.JwtTokenUtil;
 @Service
 public class UserService implements UserDetailsService {
 
-    @Autowired
-    private UserRepository repository;
+	@Autowired
+	private UserRepository repository;
 
-    @Autowired
-    private AuthenticationManager authenticationManager;
+	@Autowired
+	private AuthenticationManager authenticationManager;
 
-    @Autowired
-    private JwtTokenUtil jwtTokenUtil;
+	@Autowired
+	private JwtTokenUtil jwtTokenUtil;
 
-    public User save(User User) {
-        return repository.save(User);
-    }
+	public User save(User User) {
+		return repository.save(User);
+	}
 
-    public User findById(Long id) {
-        return repository.findById(id).orElse(null);
-    }
+	public User findById(Long id) {
+		return repository.findById(id).orElse(null);
+	}
 
-    public List<User> findAll() {
-        return repository.findAll();
-    }
+	public List<User> findAll() {
+		return repository.findAll();
+	}
 
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return repository.findByUsername(username);
-    }
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		return repository.findByUsername(username);
+	}
 
-    public ResponseEntity<?> signin(JwtRequest authenticationRequest) {
+	public ResponseEntity<?> signin(JwtRequest authenticationRequest) {
 
-        try {
-            authenticate(authenticationRequest.getUsername(), authenticationRequest.getSenha());
+		try {
+			authenticate(authenticationRequest.getUsername(), authenticationRequest.getSenha());
 
-            final User userDetails = repository.findByUsername(authenticationRequest.getUsername());
+			final User userDetails = repository.findByUsername(authenticationRequest.getUsername());
 
-            final String token = jwtTokenUtil.generateToken(userDetails);
+			final String token = jwtTokenUtil.generateToken(userDetails);
 
-            return ResponseEntity.ok(token);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return ResponseEntity.ok(e.getMessage());
-        }
-    }
+			return ResponseEntity.ok(token);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return ResponseEntity.ok(e.getMessage());
+		}
+	}
 
-    private void authenticate(String username, String password) throws Exception {
-        try {
-            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
-        } catch (DisabledException e) {
-            throw new Exception("USUARIO DESABILITADO", e);
-        } catch (BadCredentialsException e) {
-            throw new Exception("CREDENCIAIS INVALIDAS", e);
-        }
-    }
+	private void authenticate(String username, String password) throws Exception {
+		try {
+			authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
+		} catch (DisabledException e) {
+			throw new Exception("USUARIO DESABILITADO", e);
+		} catch (BadCredentialsException e) {
+			throw new Exception("CREDENCIAIS INVALIDAS", e);
+		}
+	}
 }

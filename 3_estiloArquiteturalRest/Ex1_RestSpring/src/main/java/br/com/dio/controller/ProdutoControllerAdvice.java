@@ -15,23 +15,24 @@ import br.com.dio.exception.ProductPriceException;
 @ControllerAdvice
 public class ProdutoControllerAdvice extends ResponseEntityExceptionHandler {
 
-    @ExceptionHandler(ProductNullException.class)
-    public ResponseEntity<Object> capturaErroNull() {
+	@ExceptionHandler(ProductNullException.class)
+	public ResponseEntity<Object> capturaErroNull() {
 
-        Map<String, Object> body = new HashMap<String, Object>();
+		Map<String, Object> body = new HashMap<String, Object>();
 
-        body.put("message", "Verifique os campos do produto");
+		body.put("message", "Verifique os campos do produto");
 
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(body);
-    }
+		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(body);
+	}
 
-    @ExceptionHandler(ProductPriceException.class)
-    public ResponseEntity<Object> capturaErroPreco() {
+	@ExceptionHandler(ProductPriceException.class)
+	public ResponseEntity<Object> capturaErroPreco() {
 
-        Map<String, Object> body = new HashMap<String, Object>();
+		Map<String, Object> body = new HashMap<String, Object>();
 
-        body.put("message", "Verifique o preço do produto");
+		body.put("message", "Verifique o preço do produto");
 
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(body);
-    }
+		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(body);
+	}
+
 }

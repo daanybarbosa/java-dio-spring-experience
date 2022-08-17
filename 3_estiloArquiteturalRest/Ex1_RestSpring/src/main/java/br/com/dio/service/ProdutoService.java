@@ -13,22 +13,22 @@ import br.com.dio.repository.ProdutoRepository;
 @Service
 public class ProdutoService {
 
-    @Autowired
-    private ProdutoRepository repository;
+	@Autowired
+	private ProdutoRepository repository;
 
-    public Produto save(Produto produto) throws Exception {
-        if (produto.getNome() == null || produto.getPreco() == null)
-            throw new ProductNullException();
-        if (produto.getPreco() < 0)
-            throw new ProductPriceException();
-        return repository.save(produto);
-    }
+	public Produto save(Produto produto) throws Exception {
+		if (produto.getNome() == null || produto.getPreco() == null)
+			throw new ProductNullException();
+		if (produto.getPreco() < 0)
+			throw new ProductPriceException();
+		return repository.save(produto);
+	}
 
-    public Produto findById(Long id) {
-        return repository.findById(id).orElse(null);
-    }
+	public Produto findById(Long id) {
+		return repository.findById(id).orElse(null);
+	}
 
-    public List<Produto> findAll() {
-        return repository.findAll();
-    }
+	public List<Produto> findAll() {
+		return repository.findAll();
+	}
 }

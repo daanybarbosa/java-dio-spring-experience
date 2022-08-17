@@ -18,33 +18,34 @@ import br.com.dio.service.ProdutoService;
 @RequestMapping(value = "/produto")
 public class ProdutoController {
 
-    @Autowired
-    private ProdutoService service;
+	@Autowired
+	private ProdutoService service;
 
-    @PostMapping(value = "/save")
-    public ResponseEntity<Produto> salvaProduto(@RequestBody Produto produto) throws Exception {
+	@PostMapping(value = "/save")
+	public ResponseEntity<Produto> salvaProduto(@RequestBody Produto produto) throws Exception {
 
-        produto = service.save(produto);
+		produto = service.save(produto);
 
-        return ResponseEntity.ok().body(produto);
+		return ResponseEntity.ok().body(produto);
 
-    }
+	}
 
-    @GetMapping(value = "/{id}")
-    public ResponseEntity<Produto> buscaProduto(@PathVariable Long id) {
+	@GetMapping(value = "/{id}")
+	public ResponseEntity<Produto> buscaProduto(@PathVariable Long id) {
 
-        Produto produto = service.findById(id);
+		Produto produto = service.findById(id);
 
-        return ResponseEntity.ok().body(produto);
+		return ResponseEntity.ok().body(produto);
 
-    }
+	}
 
-    @GetMapping(value = "/busca-todos")
-    public ResponseEntity<List<Produto>> buscaTodosProdutos() {
+	@GetMapping(value = "/busca-todos")
+	public ResponseEntity<List<Produto>> buscaTodosProdutos() {
 
-        List<Produto> produtos = service.findAll();
+		List<Produto> produtos = service.findAll();
 
-        return ResponseEntity.ok().body(produtos);
+		return ResponseEntity.ok().body(produtos);
 
-    }
+	}
+
 }

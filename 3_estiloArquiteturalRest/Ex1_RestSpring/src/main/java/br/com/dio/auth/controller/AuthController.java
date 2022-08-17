@@ -14,13 +14,13 @@ import br.com.dio.config.jwt.JwtRequest;
 @RequestMapping("/auth")
 public class AuthController {
 
-    @Autowired
-    private UserService userService;
+	@Autowired
+	private UserService userService;
 
-    @PostMapping("/signin")
-    public ResponseEntity<?> authenticateUser(@RequestBody JwtRequest request) {
-        return userService.signin(request);
+	@PostMapping("/signin")
+	public ResponseEntity<?> authenticateUser(@RequestBody JwtRequest request) {
+		return userService.signin(request);
 
-    }
+	}
 
 }

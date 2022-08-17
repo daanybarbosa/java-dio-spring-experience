@@ -16,29 +16,31 @@ import br.com.dio.auth.service.UserService;
 @Service
 public class Initializer {
 
-    @Autowired
-    private UserService userService;
+	@Autowired
+	private UserService userService;
 
-    @Autowired
-    private RoleService roleService;
+	@Autowired
+	private RoleService roleService;
 
-    @PostConstruct
-    public void criaUsuariosEPermissoes() {
-        Role roleAdmin = new Role();
+	@PostConstruct
+	public void criaUsuariosEPermissoes() {
+		Role roleAdmin = new Role();
 
-        roleAdmin.setName("USER");
+		//roleAdmin.setName("ADMIN"); //autenticação de ADMIN
+		roleAdmin.setName("USER"); //autenticação de USER
 
-        roleService.save(roleAdmin);
+		roleService.save(roleAdmin);
 
-        User user = new User();
-        user.setAtivo(true);
-        user.setEmail("teste@teste.com");
-        user.setNome("Kaique Arantes");
-        user.setSenha(new BCryptPasswordEncoder().encode("123456"));
-        user.setUsername("karantes");
-        user.setRoles(Arrays.asList(roleAdmin));
+		User user = new User();
+		user.setAtivo(true);
+		user.setEmail("teste@teste.com");
+		//user.setNome("Kaique Arantes");
+		user.setNome("Daniele");
+		user.setSenha(new BCryptPasswordEncoder().encode("123456"));
+		user.setUsername("danielebsilva");
+		user.setRoles(Arrays.asList(roleAdmin));
 
-        userService.save(user);
+		userService.save(user);
 
-    }
+	}
 }
