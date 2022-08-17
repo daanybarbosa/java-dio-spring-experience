@@ -51,6 +51,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 		httpSecurity.csrf().disable()
 				.authorizeRequests().antMatchers("/auth/signin").permitAll()
+				.antMatchers("/actuator").permitAll() //autenticar o Actuator
 				.antMatchers("/produto/**").hasAnyRole("ADMIN") //para salvar o produto precisa ser ADMIN
 				.antMatchers("/pedido/**").authenticated() //para salvar o pedido precisa estar autenticado
 				.anyRequest().authenticated().and()

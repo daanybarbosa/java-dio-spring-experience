@@ -26,8 +26,8 @@ public class Initializer {
 	public void criaUsuariosEPermissoes() {
 		Role roleAdmin = new Role();
 
-		//roleAdmin.setName("ADMIN"); //autenticação de ADMIN
-		roleAdmin.setName("USER"); //autenticação de USER
+		roleAdmin.setName("ADMIN"); //autenticação de ADMIN
+		//roleAdmin.setName("USER"); //autenticação de USER
 
 		roleService.save(roleAdmin);
 
