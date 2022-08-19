@@ -6,12 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="RestSpring" />
         <module name="introducaoSpringBoot" />
+        <module name="REST-spring" />
         <module name="Ex7_ProjetoFeign2" />
         <module name="utilizandoBeans" />
         <module name="ProjetoFeign" />
         <module name="Ex2_SpringBootConfig" />
-        <module name="projeto-spring-boot" />
         <module name="Ex8_springbootTest" />
         <module name="springbootweb" />
         <module name="personApi" />
@@ -25,6 +26,8 @@
       <module name="personApi" target="18" />
       <module name="projeto-spring-boot" target="17" />
       <module name="ProjetoFeign" target="18" />
+      <module name="REST-spring" target="1.8" />
+      <module name="RestSpring" target="18" />
       <module name="springbootweb" target="18" />
       <module name="utilizandoBeans" target="18" />
     </bytecodeTargetLevel>
@@ -35,6 +38,8 @@
       <module name="Ex7_ProjetoFeign2" options="-parameters" />
       <module name="Ex8_springbootTest" options="-parameters" />
       <module name="ProjetoFeign" options="-parameters" />
+      <module name="REST-spring" options="-parameters" />
+      <module name="RestSpring" options="-parameters" />
       <module name="introducaoSpringBoot" options="-parameters" />
       <module name="personApi" options="-parameters" />
       <module name="projeto-spring-boot" options="-parameters" />
