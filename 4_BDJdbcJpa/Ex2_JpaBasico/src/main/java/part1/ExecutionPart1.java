@@ -25,13 +25,13 @@ public class ExecutionPart1 {
         Estado estadoParaAdicionar = new Estado("Rio de Janeiro", "RJ");
         Aluno alunoParaAdicionar = new Aluno("Daniel", 29, estadoParaAdicionar);
 
-        // 2.2 - Iniciar uma trasacao para adiconar as instancias no banco de dados
-        entityManager.getTransaction().begin();
+        // 2.2 - Iniciar uma transacao para adiconar as instancias no banco de dados
+        entityManager.getTransaction().begin(); //iniciou uma transação
 
         entityManager.persist(estadoParaAdicionar);
         entityManager.persist(alunoParaAdicionar);
 
-        entityManager.getTransaction().commit();
+        entityManager.getTransaction().commit(); //faz o commit para salvar no banco
 
         // 3 - Encerrar o gerenciador de entidades e encerrar a fabrica de gerenciadores de entidade.
         entityManager.close();

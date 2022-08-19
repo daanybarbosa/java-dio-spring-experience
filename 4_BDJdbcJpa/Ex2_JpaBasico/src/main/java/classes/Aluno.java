@@ -5,6 +5,7 @@ import javax.persistence.*;
 @Entity
 public class Aluno {
 
+    //Mapeamento das colunas para o banco de dados
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int id;
@@ -15,6 +16,7 @@ public class Aluno {
     @Column(nullable = false)
     private int idade;
 
+    //varios alunos que podem morar no mesmo estado
     @ManyToOne(fetch = FetchType.LAZY)
     private Estado estado;
 

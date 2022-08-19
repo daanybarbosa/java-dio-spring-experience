@@ -28,9 +28,9 @@ public class ExecutionPart3 {
         entityManager.getTransaction().commit();
 
         // 2 - Vamos utilizar o método do EntityManager find(), SQL nativo, JPQL e JPA Criteria API para realizar uma
-        // consulta que retornarar o mesmo valor equivalente aos seguintes SQL:
-        // SELECT * FROM Aluno WHERE id = 1 (Equivalente ao método find do entityManager na parte 2.2)
-        // SELECT * FROM Aluno WHERE nome = 'Daniel' (Sera o equivalente para as outras consultas nas partes 2.3 - 2.4 - 2.5)
+        consulta que retornarar o mesmo valor equivalente aos seguintes SQL:
+        SELECT * FROM Aluno WHERE id = 1 (Equivalente ao método find do entityManager na parte 2.2)
+        SELECT * FROM Aluno WHERE nome = 'Daniel' (Sera o equivalente para as outras consultas nas partes 2.3 - 2.4 - 2.5)
 
         // 2.1 O parametro de busca que será utilizado nas proximas consultas
         String nome = "Daniel";
