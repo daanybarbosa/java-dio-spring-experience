@@ -13,10 +13,8 @@ public class ClienteDAO {
         this.connection = connection;
     }
 
-
-
     public List<Cliente> buscarTodosOsClientes() throws SQLException {
-        String SQL = "SELECT * FROM tb_cliente";
+        String SQL = "SELECT * FROM tb_cliente"; //consulta no banco de dados
         PreparedStatement preparedStatement = connection.prepareStatement(SQL);
         ResultSet resultSet = preparedStatement.executeQuery();
         List<Cliente> clientes = new ArrayList<>();
@@ -30,7 +28,7 @@ public class ClienteDAO {
     }
 
     public void inserirNovoCliente(String nome) throws SQLException {
-        String SQL = "INSERT INTO tb_cliente(nome) values (?)";
+        String SQL = "INSERT INTO tb_cliente(nome) values (?)"; //inclusao no banco de dados
         PreparedStatement preparedStatement = connection.prepareStatement(SQL);
         preparedStatement.setString(1, nome);
         preparedStatement.executeUpdate();

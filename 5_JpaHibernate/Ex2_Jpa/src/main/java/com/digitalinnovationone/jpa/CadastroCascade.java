@@ -18,13 +18,13 @@ public class CadastroCascade {
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
 		entityManager.getTransaction().begin();
 
-
-
 		Cliente cliente = new Cliente();
 		cliente.setNome("Rei dos Tecidos");
+
 		Multa multa = new Multa();
 		multa.setData(LocalDateTime.now());
 		multa.setValor(50.00);
+
 		Carro carro = new Carro();
 		carro.setCliente(cliente);
 		carro.setModelo("Fusca");
@@ -34,10 +34,10 @@ public class CadastroCascade {
 		cliente.setCarros(Collections.singletonList(carro));
 		entityManager.persist(cliente);
 		System.out.println(cliente);
+
 		entityManager.getTransaction().commit();
 
 		entityManager.close();
 		entityManagerFactory.close();
-
 	}
 }

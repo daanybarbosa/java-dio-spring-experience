@@ -10,6 +10,8 @@ public class DB {
         if (connection != null) {
             return connection;
         }
-        return DriverManager.getConnection("jdbc:mysql://localhost:3306/db_cadastro_cliente", "root", "root");
+        //Conexão com o banco de dados
+        //return DriverManager.getConnection("jdbc:mysql://localhost:3306/db_cadastro_cliente", "root", "root");
+        return DriverManager.getConnection("jdbc:mysql://localhost:3306/digital_innovation_one?enabledTLSProtocols=TLSv1.2", "root", "123456");
     }
 }
